@@ -191,13 +191,13 @@ console.log('window')
     r=>{
         console.log('two',r)
     }
-    输出 two undefined ....... r 的值忘记分析了。。。
+    输出 two undefined ....... r 的值忘记分析了。。。 其实就是 then callback的返回值，r 等于返回的值 没有则 undefined
 
     。。。
 
     输出 three undefined ......
 
     。。。
- 
+
     callbacks 里的回调总是被下一个 promise 的 resolve 包裹，所以会不断触发回调，直至 callbacks 为空
  */
