@@ -31,11 +31,11 @@
     const daRi = document.getElementById('da-r-i')
 
 	function log() {
-        daR.style.position = 'static'
         console.log('da-o',daO.offsetTop,daI.offsetTop,daR.offsetTop,daRi.offsetTop)
     }
 
 	function c1() {
+        daR.style.position = 'static'
 		log()
     }
 
@@ -43,13 +43,5 @@
 		daR.style.position = 'relative'
 		log();
 	}
-
-
-
-
-
-    daI.addEventListener('scroll',()=>log.log('da-i')) // no trigger
-
-    log.log(daI.scrollHeight) // 105
 
 </script>
