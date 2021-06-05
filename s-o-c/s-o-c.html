@@ -1,0 +1,55 @@
+<div id="da-o" style="height:30px;overflow-y: scroll">
+	<div id="da-i" style="height: 50px">
+		<div>90</div>
+		<div>90</div>
+		<div>90</div>
+		<div>90</div>
+		<div>90</div>
+	</div>
+</div>
+
+<div id="da-r" style="position: static;overflow: hidden">
+	<div id="da-r-i" style="width: 50px;height: 50px;margin-top: 50px">in relative box</div>
+</div>
+
+<div>
+	<div>普通元素 offsetTop 相对 body 定位</div>
+	<button onclick="c1()">Normal-offsetTop</button>
+</div>
+
+<div>
+	<div>相对定位元素-relative</div>
+	<button onclick="c2()">Relative-offsetTop</button>
+</div>
+
+
+<script>
+    const daO = document.getElementById('da-o')
+    const daI = document.getElementById('da-i')
+
+    const daR = document.getElementById('da-r')
+    const daRi = document.getElementById('da-r-i')
+
+	function log() {
+        daR.style.position = 'static'
+        console.log('da-o',daO.offsetTop,daI.offsetTop,daR.offsetTop,daRi.offsetTop)
+    }
+
+	function c1() {
+		log()
+    }
+
+    function c2(){
+		daR.style.position = 'relative'
+		log();
+	}
+
+
+
+
+
+    daI.addEventListener('scroll',()=>log.log('da-i')) // no trigger
+
+    log.log(daI.scrollHeight) // 105
+
+</script>
