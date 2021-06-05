@@ -1,0 +1,22 @@
+<div id="da-o" style="height:30px;overflow-y: scroll">
+	<div id="da-i" style="height: 50px">
+		<div>90</div>
+		<div>90</div>
+		<div>90</div>
+		<div>90</div>
+		<div>90</div>
+	</div>
+</div>
+
+<script>
+    const daO = document.getElementById('da-o')
+	// scrollTop 只有触发 scroll 事件的 div 才会不为 0
+    daO.addEventListener('scroll',()=>console.log('da-o',daO.scrollTop,daI.scrollTop)) // trigger
+
+	// 虽然 da-i 设置了 height:50px; 子元素高度已经超过了 50；但是 scroll 事件并没有触发
+	// 只有设置了 overflow scroll 相关的 css 才会触发 scroll
+	const daI = document.getElementById('da-i')
+	daI.addEventListener('scroll',()=>console.log('da-i')) // no trigger
+
+	console.log(daI.scrollHeight) // 105
+</script>
