@@ -2,9 +2,9 @@
   "name": "promise",
   "version": "1.0.0",
   "description": "",
-  "main": "src/promise.js",
+  "main": "src/promise/promise.js",
   "scripts": {
-    "test": "promises-aplus-tests test"
+    "test": "promises-aplus-tests ./src/promise/test"
   },
   "author": "",
   "license": "ISC",
