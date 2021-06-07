@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="./debounce.js" ></script>
+	<script>
+        let timer = 1
+        function log(param) {
+            console.log(timer,`param:${param}`,`this value:${this.value}`)
+            timer+=1
+        }
+        const debounceLog = debounce(log,1000)
+		const debounceObj={
+            value:90,
+			debounceLog
+		}
+
+		const logImmediate = debounce(log,1000,true)
+	</script>
+</head>
+<body>
+<button onclick="debounceLog()">normal debounce</button>
+<br />
+<button onclick="debounceLog('param')">debounce with params</button>
+<br />
+<button onclick="debounceObj.debounceLog('debounceObj')">debounce with this</button>
+<br />
+<button onclick="logImmediate()">debounce immediate</button>
+</body>
+
+
+</html>
