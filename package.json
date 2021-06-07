@@ -2,7 +2,7 @@
   "name": "promise",
   "version": "1.0.0",
   "description": "",
-  "main": "promise.js",
+  "main": "src/promise.js",
   "scripts": {
     "test": "promises-aplus-tests test"
   },

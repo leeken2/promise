@@ -1,4 +1,4 @@
-const Promise = require("./promise")
+const Promise = require("./src/promise")
 
 const resolved = value => Promise.resolve(value)
 const rejected = reason => Promise.reject(reason)
