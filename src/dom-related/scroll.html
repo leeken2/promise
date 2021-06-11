@@ -18,5 +18,7 @@
 	const daI = document.getElementById('da-i')
 	daI.addEventListener('scroll',()=>console.log('da-i')) // no trigger
 
+	// scrollHeight === dom 实际高度，If you need to know the actual size of the content， use scrollHeight
+	// https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 	console.log(daI.scrollHeight) // 105
 </script>
